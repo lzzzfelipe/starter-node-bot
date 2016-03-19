@@ -27,12 +27,12 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 })
 
 controller.hears(['kid', 'kids', 'child', 'children', 'infant', 'baby', 'toddler'], ['ambient'], function (bot, message) {
-  bot.reply(message, 'Kids? Where? Woof woof!')
+  bot.reply(message, 'Small humans? Where? Woof woof!')
   bot.reply(message, 'Grrrrrrrrrrwwwllllllll.')
   bot.reply(message, 'Woof!')
 })
 
-controller.hears([':dog:'], ['direct_message'], function (bot, message) {
+controller.hears([':dog:'], ['direct_message', 'ambient'], function (bot, message) {
   bot.reply(message, 'Oh, such a cute face this guy up there ^^ :heartbeat:')
 })
 
