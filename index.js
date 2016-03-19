@@ -26,9 +26,10 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
   bot.reply(message, 'Hello.')
 })
 
-controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
-  bot.reply(message, 'Hello.')
-  bot.reply(message, 'It\'s nice to talk to you directly.')
+controller.hears(['kid', 'kids', 'child', 'children'], ['direct_message'], function (bot, message) {
+  bot.reply(message, 'Kids? Where? Woof woof!')
+  bot.reply(message, 'Grrrrrrrrrrwwwllllllll.')
+  bot.reply(message, 'Woof!')
 })
 
 controller.hears('.*', ['mention'], function (bot, message) {
@@ -43,6 +44,7 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
       '`bot help` to see this again.'
   bot.reply(message, help)
 })
+
 
 controller.hears(['attachment'], ['direct_message', 'direct_mention'], function (bot, message) {
   var text = 'Beep Beep Boop is a ridiculously simple hosting platform for your Slackbots.'
